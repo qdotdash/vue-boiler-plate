@@ -10,21 +10,25 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      ...ROUTES.DEFAULT,
+      name: 'default',
+      path: ROUTES.DEFAULT,
       component: BaseLayout,
       children: [
         {
-          ...ROUTES.TEST1,
+          name: 'test1',
+          path: ROUTES.TEST1,
           component: TestView1
         },
         {
-          ...ROUTES.TEST2,
+          name: 'test2',
+          path: ROUTES.TEST2,
           component: TestView2
         }
       ]
     },
     {
-      ...ROUTES.LOGIN,
+      name: 'login',
+      path: ROUTES.LOGIN,
       component: Login
     }
   ]

@@ -8,7 +8,7 @@ const { data, isError } = login({
 })
 
 watchEffect(() => {
-  console.log('In login', data, isError)
+  console.log('In login', data.value, isError.value)
 })
 </script>
 
