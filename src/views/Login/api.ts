@@ -2,11 +2,11 @@ import { useApi } from '@/services/api'
 import { ApiMethodTypes } from '@/types/api'
 
 const loginApis = {
-  login: (user: { username: string; password: string }) =>
+  login: () =>
     useApi({
       query: 'login',
       method: ApiMethodTypes.POST,
-      payload: user
+      isLazy: true
     })
 }
 
